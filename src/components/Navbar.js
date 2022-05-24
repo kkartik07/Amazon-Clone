@@ -26,10 +26,13 @@ function Navbar() {
                     <span className='navbar-option-line2'> & Orders</span>
                 </div>
 
-                <div className='navbar-option'>
-                    <span className='navbar-option-line1'>Your Cart</span>
+                <div className='navbar-option navbar-cart'>
+                    <span className='navbar-option-line1'>Your</span>
+                    <span className='navbar-option-line2'>Cart</span>
+                </div>
+                <div className='navbar-optionBasket'>
                     <img src={ShoppingBasket} alt='shopping-basket' className='shopping-basket-icon' />
-                    <span className="header__optionLineTwo header__basketCount">
+                    <span className="header__optionLineTwo navbar-basketCount">
                         0
                     </span>
                 </div>

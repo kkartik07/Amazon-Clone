@@ -4,44 +4,14 @@
     font-size: large;
     color:aliceblue
 }
-.navbar-logo{
-    width:50px;
-    margin: 0 20px;
 
-}
-.navbar-search{
-    display: flex;
-    align-items: center;
 
-}
 .navbar-search-input{
     display: flex;
-    height: 30px;
-    width:250px;
-    align-items: center;
-    border-radius:6px;   
-    margin-left: 15px;
+    
     
 }
-.navbar-searcher{
-    padding: 5px;
-    height: 20px !important;
-    border-radius: 2px;
-    background-color: #cd9034;
-}
-.navbar-options{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:space-evenly;
-}
-.navbar-option{
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    margin-right: 10px;
-    color:white;
-}
+
 
 
 .navbar {
@@ -64,17 +34,21 @@
   .navbar-search-input {
     height: 12px;
     padding: 10px;
-    border: none;
+    margin-left: 15px;
+    border-radius:6px;   
     width: 100%;
   }
   
   .navbar-searcher {
     padding: 5px;
+    margin: 2px;
+    border-radius: 3px;
     height: 22px !important;
     background-color: #cd9042;
   }
   
   .navbar-option-line1 {
+    margin-right: 4px;
     font-size: 10px;
   }
   
@@ -83,16 +57,14 @@
     font-weight: 800;
   }
   
-  .navbar__optionBasket {
+  .navbar-optionBasket {
     display: flex;
     align-items: center;
     color: white;
   }
   
-  .navbar__basketCount {
-    margin-left: 10px;
-    margin-right: 10px;
-    background-color:white;
+  .navbar-basketCount {
+   margin: 0 4px;
   }
   
   .navbar-options {
@@ -103,13 +75,16 @@
   .navbar-option {
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin:0 20px;
     color: white;
   }
  
+ .navbar-cart{
+   margin: 0;
+ }
   .shopping-basket-icon{
-      width:20px;
+      width:25px;
+      margin-left: 5px;
       background-color:rgb(7, 91, 117);
   }
 
