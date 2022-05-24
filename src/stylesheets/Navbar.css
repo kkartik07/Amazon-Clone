@@ -1,12 +1,4 @@
-.navbar{
-    background-color:#05668d;
-    height:60px;
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top:0;
-    z-index: 10;
-}
+
 .navbar-brandname{
     font-weight: 650;
     font-size: large;
@@ -20,6 +12,7 @@
 .navbar-search{
     display: flex;
     align-items: center;
+
 }
 .navbar-search-input{
     display: flex;
@@ -49,3 +42,74 @@
     margin-right: 10px;
     color:white;
 }
+
+
+.navbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #131921;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .navbar-search {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border-radius: 24px;
+  }
+  
+  .navbar-search-input {
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+  }
+  
+  .navbar-searcher {
+    padding: 5px;
+    height: 22px !important;
+    background-color: #cd9042;
+  }
+  
+  .navbar-option-line1 {
+    font-size: 10px;
+  }
+  
+  .navbar-option-line2 {
+    font-size: 13px;
+    font-weight: 800;
+  }
+  
+  .navbar__optionBasket {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+  
+  .navbar__basketCount {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color:white;
+  }
+  
+  .navbar-options {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .navbar-option {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+  }
+ 
+  .shopping-basket-icon{
+      width:20px;
+      background-color:rgb(7, 91, 117);
+  }
+
