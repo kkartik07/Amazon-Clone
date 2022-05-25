@@ -3,13 +3,18 @@ import '../stylesheets/Navbar.css'
 import Logo from '../icons/logo.png'
 import Search from '../icons/search.png'
 import ShoppingBasket from '../icons/shopping-basket.png'
-
+import { Link } from 'react-router-dom';
 function Navbar() {
     return (
         <div className='navbar'>
-            <img className='navbar-logo' alt='logo' src={Logo} />
 
-            <span className='navbar-brandname'>SnapKart</span>
+            <div>
+                <Link to='/' className='navbar-logo'>
+                    <img alt='logo' src={Logo} />
+                    <span className='navbar-brandname'>SnapKart</span>
+                </Link>
+            </div>
+
             <div className='navbar-search'>
                 <input className='navbar-search-input' type='text' />
                 <img src={Search} className='navbar-searcher' alt='search-icon' />
@@ -30,13 +35,14 @@ function Navbar() {
                     <span className='navbar-option-line1'>Your</span>
                     <span className='navbar-option-line2'>Cart</span>
                 </div>
-                <div className='navbar-optionBasket'>
-                    <img src={ShoppingBasket} alt='shopping-basket' className='shopping-basket-icon' />
-                    <span className="header__optionLineTwo navbar-basketCount">
-                        0
-                    </span>
-                </div>
-
+                <Link to='/checkout'>
+                    <div className='navbar-optionBasket'>
+                        <img src={ShoppingBasket} alt='shopping-basket' className='shopping-basket-icon' />
+                        <span className="header__optionLineTwo navbar-basketCount">
+                            0
+                        </span>
+                    </div>
+                </Link>
             </div>
         </div>
     );
