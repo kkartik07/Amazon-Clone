@@ -4,7 +4,12 @@ import Logo from '../icons/logo.png'
 import Search from '../icons/search.png'
 import ShoppingBasket from '../icons/shopping-basket.png'
 import { Link } from 'react-router-dom';
+import { useStateValue } from '../components/StateProvider'
+
+
 function Navbar() {
+    const [{ basket }, dispatch] = useStateValue();
+
     return (
         <div className='navbar'>
 
@@ -39,7 +44,7 @@ function Navbar() {
                     <div className='navbar-optionBasket'>
                         <img src={ShoppingBasket} alt='shopping-basket' className='shopping-basket-icon' />
                         <span className="header__optionLineTwo navbar-basketCount">
-                            0
+                            {basket?.length}
                         </span>
                     </div>
                 </Link>
