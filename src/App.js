@@ -15,7 +15,6 @@ function App() {
         <Routes>
           <Route path="/" element={[<Navbar />, <Home />]} />
           <Route path="/checkout" element={[<Navbar />, <Checkout />]} />
-          <Route path="/h1" element={[<Navbar />, <h1>hekwwdjnwkn</h1>]} />
         </Routes>
       </div>
     </Router>
