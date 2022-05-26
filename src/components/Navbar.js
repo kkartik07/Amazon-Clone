@@ -26,10 +26,12 @@ function Navbar() {
             </div>
 
             <div className='navbar-options'>
-                <div className='navbar-option'>
-                    <span className='navbar-option-line1'>Hello Kartik!</span>
-                    <span className='navbar-option-line2'>Sign In</span>
-                </div>
+                <Link to='/login'>
+                    <div className='navbar-option'>
+                        <span className='navbar-option-line1'>Hello Kartik!</span>
+                        <span className='navbar-option-line2'>Sign In</span>
+                    </div>
+                </Link>
 
                 <div className='navbar-option'>
                     <span className='navbar-option-line1'>Returns</span>
