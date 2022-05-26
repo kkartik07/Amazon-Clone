@@ -5,13 +5,23 @@ import Search from '../icons/search.png'
 import ShoppingBasket from '../icons/shopping-basket.png'
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../components/StateProvider'
+import { auth } from '../Firebase'
 
 
 function Navbar() {
-    const [{ basket }, dispatch] = useStateValue();
-
+    const [{ basket, user },] = useStateValue();
+    const handleAuthentication = () => {
+        if (user) {
+            auth.signOut();
+        }
+    }
+    const userName = (user) => {
+        var name = user.email.substring(0, user.email.lastIndexOf('@'));
+        return name;
+    }
     return (
-        <div className='navbar'>
+
+        <div className='navbar' >
 
             <div>
                 <Link to='/' className='navbar-logo'>
@@ -26,10 +36,10 @@ function Navbar() {
             </div>
 
             <div className='navbar-options'>
-                <Link to='/login'>
-                    <div className='navbar-option'>
-                        <span className='navbar-option-line1'>Hello Kartik!</span>
-                        <span className='navbar-option-line2'>Sign In</span>
+                <Link to={!user && '/login'}>
+                    <div className='navbar-option' onClick={handleAuthentication}>
+                        <span className='navbar-option-line1'>Hello {user ? userName(user) : 'Guest'}!</span>
+                        <span className='navbar-option-line2'>{user ? 'Sign Out' : 'Sign In'}</span>
                     </div>
                 </Link>
 

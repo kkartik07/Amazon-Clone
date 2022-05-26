@@ -38,7 +38,7 @@ function Login() {
         <div className='login'>
             <Link to='/' className='login-logo'>
                 <img src={logo} alt='logo' className='brand-logo' />
-                <a className='brandname' to='/'>SnapKart</a>
+                <Link className='brandname' to='/'>SnapKart</Link>
             </Link>
             <hr />
 
