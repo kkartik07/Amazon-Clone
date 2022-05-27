@@ -9,13 +9,13 @@ import {
   Route
 } from "react-router-dom";
 import { useEffect } from 'react';
-import { auth } from './Firebase';
+import { auth } from './firebase';
 import { useStateValue } from './components/StateProvider';
 import Payment from './components/Payment';
 
 function App() {
   // eslint-disable-next-line
-  const { dispatch } = useStateValue();
+  const [user, dispatch] = useStateValue();
 
   useEffect(() => {
     // will run only once the app component loads....

@@ -3,7 +3,7 @@ import '../stylesheets/Login.css'
 import logo from '../icons/logo-big.png'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-import { auth } from '../Firebase.js'
+import { auth } from '../firebase.js'
 
 function Login() {
     const navigate = useNavigate();

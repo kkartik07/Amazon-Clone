@@ -4,15 +4,14 @@ import 'firebase/compat/firestore';
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBsnxyftzGcjBOFZC3uIrVC-TRvne3pyS0",
-  authDomain: "snapkart-4b965.firebaseapp.com",
-  projectId: "snapkart-4b965",
-  storageBucket: "snapkart-4b965.appspot.com",
-  messagingSenderId: "232777010200",
-  appId: "1:232777010200:web:ed92d4cf7f3f68b25c076d",
-  measurementId: "G-R4EXWJEPQW"
+  apiKey: "AIzaSyBeYG7zqvokRDfRdKz5oV7H8ET4muKot0A",
+  authDomain: "snapkartnew.firebaseapp.com",
+  projectId: "snapkartnew",
+  storageBucket: "snapkartnew.appspot.com",
+  messagingSenderId: "965584957602",
+  appId: "1:965584957602:web:ccc9cb7110c75dc7fd27fb",
+  measurementId: "G-X9N4VQNKN9"
 };
-
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 const db = firebaseApp.firestore();

@@ -5,7 +5,7 @@ import Search from '../icons/search.png'
 import ShoppingBasket from '../icons/shopping-basket.png'
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../components/StateProvider'
-import { auth } from '../Firebase'
+import { auth } from '../firebase'
 
 
 function Navbar() {
