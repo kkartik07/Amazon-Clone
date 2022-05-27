@@ -4,7 +4,7 @@ import { useStateValue } from './StateProvider'
 // import product from '../images/product.jpg'
 
 function Product(props) {
-    const [{ basket }, dispatch] = useStateValue();
+    const [{ basket, /* user */ }, dispatch] = useStateValue();
 
     const addToBasket = () => {
         console.log(basket)
@@ -33,7 +33,7 @@ function Product(props) {
                 </div>
             </div>
             <img src={props.image} alt='product' />
-            <button onClick={addToBasket} className='product-button'>Add to cart</button>
+            <button /* disabled={!user} */ onClick={addToBasket} className='product-button'>Add to cart</button>
 
         </div>
     )

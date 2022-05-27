@@ -11,9 +11,10 @@ import {
 import { useEffect } from 'react';
 import { auth } from './Firebase';
 import { useStateValue } from './components/StateProvider';
+import Payment from './components/Payment';
 
 function App() {
-
+  // eslint-disable-next-line
   const { dispatch } = useStateValue();
 
   useEffect(() => {
@@ -37,6 +38,7 @@ function App() {
         })
       }
     })
+    // eslint-disable-next-line
   }, [])
 
   return (
@@ -46,6 +48,7 @@ function App() {
           <Route path="/" element={[<Navbar />, <Home />]} />
           <Route path="/checkout" element={[<Navbar />, <Checkout />]} />
           <Route path="/login" element={[<Login />]} />
+          <Route path="/payment" element={[<Navbar />, <Payment />]} />
         </Routes>
       </div>
     </Router>
