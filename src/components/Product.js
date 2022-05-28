@@ -7,7 +7,6 @@ function Product(props) {
     const [{ basket, /* user */ }, dispatch] = useStateValue();
 
     const addToBasket = () => {
-        console.log(basket)
         dispatch({
             type: 'ADD_TO_BASKET',
             item: {
