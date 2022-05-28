@@ -8,6 +8,7 @@ import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from './reducer';
 import axios from '../axios.js';
 
+
 function Payment() {
     // eslint-disable-next-line
     const [{ basket, user }, dispatch] = useStateValue();
@@ -36,6 +37,8 @@ function Payment() {
         getClientSecret();
     }, [basket])
 
+    console.log('THE SECRET IS >>> ', clientSecret)
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setProcessing(true);
@@ -50,7 +53,7 @@ function Payment() {
             setError(null);
             setProcessing(false)
 
-            navigate('/orders')
+            navigate('/orders', { replace: true })
         })
     }
 
