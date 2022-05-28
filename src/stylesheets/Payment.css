@@ -23,11 +23,11 @@ a {
 }
 
 .payment-title {
-    flex: 0.2;
+    flex: 0.4;
 }
 
 .payment-items,
 .payment-address,
-.payment-method {
+.payment-details {
     flex: 0.8;
 }
