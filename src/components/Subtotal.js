@@ -30,7 +30,7 @@ function Subtotal() {
                 thousandSeparator={true}
                 prefix={'$'}
             />
-            <button disabled={!user} onClick={e => navigate('/payment')} >Proceed to checkout </button>
+            <button className='proceed-btn' disabled={!user} onClick={e => navigate('/payment')} >Proceed to checkout </button>
         </div>
     )
 }

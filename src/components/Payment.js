@@ -71,7 +71,7 @@ function Payment() {
                         <h2>delivery address</h2>
                     </div>
                     <div className='payment-address'>
-                        <h2>Hello {user ? user.email : 'Guest'}</h2>
+                        <h2>Hello {user ? user.email.substring(0, user.email.lastIndexOf('@')) : 'Guest'}</h2>
                         <p>1-105/65 Plot No.5, Road No.5</p>
                         <p>Nagaram, hyderabad</p>
                     </div>
