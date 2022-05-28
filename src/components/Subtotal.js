@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 
 function Subtotal() {
     // eslint-disable-next-line
-    const [{ basket }, dispatch] = useStateValue();
+    const [{ basket, user }, dispatch] = useStateValue();
 
     const navigate = useNavigate();
 
@@ -30,7 +30,7 @@ function Subtotal() {
                 thousandSeparator={true}
                 prefix={'$'}
             />
-            <button onClick={e => navigate('/payment')} >Proceed to checkout </button>
+            <button disabled={!user} onClick={e => navigate('/payment')} >Proceed to checkout </button>
         </div>
     )
 }
