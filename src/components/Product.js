@@ -19,7 +19,7 @@ function Product(props) {
         })
     }
     return (
-        <div className='product'>
+        <div className='product box'>
             <div className='product-info'>
                 <p>{props.title}</p>
                 <small>$</small><strong>{props.price}</strong>
