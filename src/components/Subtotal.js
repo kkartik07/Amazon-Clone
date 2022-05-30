@@ -28,7 +28,7 @@ function Subtotal() {
                 value={getBasketTotal(basket)}
                 displayType={"text"}
                 thousandSeparator={true}
-                prefix={'$'}
+                prefix={'Rs '}
             />
             <button className='proceed-btn' disabled={!user} onClick={e => navigate('/payment')} >Proceed to checkout </button>
         </div>

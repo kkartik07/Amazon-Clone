@@ -22,7 +22,7 @@ function Product(props) {
         <div className='product box'>
             <div className='product-info'>
                 <p>{props.title}</p>
-                <small>$</small><strong>{props.price}</strong>
+                <small>Rs</small><strong>{props.price}</strong>
                 <div className='product-rating'>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>

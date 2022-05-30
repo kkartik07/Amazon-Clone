@@ -16,7 +16,7 @@ function CheckoutProduct(props) {
             <img src={props.image} alt='product' className='checkout-product-image' />
             <div className='checkout-product-info'>
                 <p className='checkout-product-title'>{props.title}</p>
-                <p className='checkout-product-price'><small>$</small>{props.price}</p>
+                <p className='checkout-product-price'><small>Rs </small>{props.price}</p>
                 <button onClick={removeFromBasket}>Remove from Cart</button>
             </div>
         </div>

@@ -7,6 +7,7 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from './reducer';
 import axios from '../axios.js';
+import { db } from '../firebase'
 
 
 function Payment() {
@@ -20,7 +21,7 @@ function Payment() {
 
     const [error, setError] = useState(null);
     const [processing, setProcessing] = useState("");
-    const [succeeded, setSucceeded] = useState();
+    const [succeeded, setSucceeded] = useState(false);
     const [disabled, setDisabled] = useState(true);
     const [clientSecret, setClientSecret] = useState(true);
 
@@ -28,11 +29,11 @@ function Payment() {
         //generate special stripe secret which allows us to charge a customer
 
         const getClientSecret = async () => {
-            const response = await axios({
+            const res = await axios({
                 method: 'post',
                 url: `/payments/create?total=${getBasketTotal(basket) * 100}`
             });
-            setClientSecret(response.data.clientSecret);
+            setClientSecret(res.data.clientSecret)
         }
         getClientSecret();
     }, [basket])
@@ -45,13 +46,28 @@ function Payment() {
 
         const payload = await stripe.confirmCardPayment(clientSecret, {
             payment_method: {
-                card: elements.getElement(CardElement)
+                card: elements.getElement(CardElement),
             }
         }).then(({ paymentIntent }) => {
             // paymentIntent=payment confirmation
+            // db
+            //     .collection('users')
+            //     .doc(user?.uid)
+            //     .collection('orders')
+            //     .doc(paymentIntent.id)
+            //     .set({
+            //         basket: basket,
+            //         amount: paymentIntent.amount,
+            //         created: paymentIntent.created
+            //     })
+
             setSucceeded(true);
             setError(null);
             setProcessing(false)
+
+            dispatch({
+                type: 'EMPTY_BASKET'
+            })
 
             navigate('/orders', { replace: true })
         })
@@ -113,7 +129,7 @@ function Payment() {
                                     value={getBasketTotal(basket)}
                                     displayType={"text"}
                                     thousandSeparator={true}
-                                    prefix={"$"}
+                                    prefix={"Rs"}
                                 />
                                 <button disabled={processing || disabled || succeeded}>
                                     <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
