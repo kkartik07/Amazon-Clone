@@ -14,7 +14,7 @@ function Checkout() {
             <div className='checkout'>
                 <div className='checkout-left'>
                     <img src={checkoutAd} alt='checkout-ad' className='checkout-ad' />
-                    <h2>Hello, {user ? user.email.substring(0, user.email.lastIndexOf('@')) : 'Guest'} :)</h2>
+                    <h2>Hello, {user ? user.email.substring(0, user.email.lastIndexOf('@')) : 'Guest'} </h2>
                     <hr />
                     <h2 className='checkout-title'>Your Cart</h2>
                     {basket.map(item => (

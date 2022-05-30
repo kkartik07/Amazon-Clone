@@ -4,7 +4,7 @@ import { useStateValue } from './StateProvider'
 // import product from '../images/product.jpg'
 
 function Product(props) {
-    const [{ basket, /* user */ }, dispatch] = useStateValue();
+    const [{ basket, user }, dispatch] = useStateValue();
 
     const addToBasket = () => {
         dispatch({
@@ -14,7 +14,6 @@ function Product(props) {
                 title: props.title,
                 image: props.image,
                 price: props.price,
-                rating: props.rating
             }
         })
     }
@@ -23,13 +22,7 @@ function Product(props) {
             <div className='product-info'>
                 <p>{props.title}</p>
                 <small>Rs</small><strong>{props.price}</strong>
-                <div className='product-rating'>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                </div>
+
             </div>
             <img src={props.image} alt='product' />
             <button /* disabled={!user} */ onClick={addToBasket} className='product-button'>Add to cart</button>

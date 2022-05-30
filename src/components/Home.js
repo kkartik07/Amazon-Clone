@@ -12,19 +12,19 @@ function Home() {
 
 
                 <div className='home-row'>
-                    <Product title='Samsung Galaxy S23' price='999' image={ProductImage} />
-                    <Product title='Samsung Galaxy S23' price='999' image={ProductImage} />
+                    <Product title='Samsung Galaxy S23' price='999' image={ProductImage} id="12321341" />
+                    <Product title='Samsung Galaxy S23' price='999' image={ProductImage} id="12321341" />
                 </div>
 
 
                 <div className='home-row'>
-                    <Product title='Samsung Galaxy S23' price='999' image={ProductImage} />
-                    <Product title='Samsung Galaxy S23' price='999' image={ProductImage} />
-                    <Product title='Samsung Galaxy S23' price='999' image={ProductImage} />
+                    <Product title='Samsung Galaxy S23' price='999' image={ProductImage} id="12321341" />
+                    <Product title='Samsung Galaxy S23' price='999' image={ProductImage} id="12321341" />
+                    <Product title='Samsung Galaxy S23' price='999' image={ProductImage} id="12321341" />
                 </div>
 
                 <div className='home-row'>
-                    <Product title='Samsung Galaxy S23' price='999' image={ProductImage} />
+                    <Product title='Samsung Galaxy S23' price='999' image={ProductImage} id="12321341" />
                 </div>
 
             </div>
