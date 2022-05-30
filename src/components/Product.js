@@ -4,6 +4,7 @@ import { useStateValue } from './StateProvider'
 // import product from '../images/product.jpg'
 
 function Product(props) {
+    // eslint-disable-next-line
     const [{ basket, user }, dispatch] = useStateValue();
 
     const addToBasket = () => {
