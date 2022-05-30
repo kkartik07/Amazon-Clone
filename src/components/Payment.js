@@ -31,7 +31,7 @@ function Payment() {
         const getClientSecret = async () => {
             const res = await axios({
                 method: 'post',
-                url: `/payments/create?total=${getBasketTotal(basket) * 100}`
+                url: `/payments/create?total=${getBasketTotal(basket) * 75}`
             });
             setClientSecret(res.data.clientSecret)
         }
@@ -136,7 +136,7 @@ function Payment() {
                                     thousandSeparator={true}
                                     prefix={"Rs"}
                                 />
-                                <button disabled={processing || disabled || succeeded}>
+                                <button disabled={processing || disabled || succeeded} className='buy-now'>
                                     <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                                 </button>
                             </div>
